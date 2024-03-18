@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .item {
+            font-size: 5rem;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .box1 {
+            background: red;
+            /* Span 2 columns spaces */
+            /* Span 2 row spaces */
+
+            grid-column: span 2;
+            grid-row: span 2;
+
+            /* Equivalent to the following format */
+            
+            /* 
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: -1; 
+            */
+
+
+            /* Equivalent to the following format */
+
+            /* 
+                grid-area: 1 / 1 / -1 / 3; 
+            */
+        }
+
+        .box2 {
+            background: green;
+        }
+
+        .box3 {
+            background: blue;
+        }
+
+        .box4 {
+            background: purple;
+        }
+
+        .box5 {
+            background: orange;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* 4 columns */
+            grid-template-rows: 1fr 1fr;
+            /* 2 rows */
+            gap: 1rem;
+            height: 100vh;
+            /* Take up window height */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item box1">1</div>
+        <div class="item box2">2</div>
+        <div class="item box3">3</div>
+        <div class="item box4">4</div>
+        <div class="item box5">5</div>
+    </div>
+
+</body>
+
+</html>
